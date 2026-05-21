@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Lal PathLabs | Future of Diagnostics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&display=swap');
+        body { background: #020617; color: white; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .neon-text { text-shadow: 0 0 15px rgba(34, 211, 238, 0.5); }
+        .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; z-index: -1; }
+        .glow-btn { transition: 0.3s; background: linear-gradient(90deg, #06b6d4, #3b82f6); }
+        .glow-btn:hover { box-shadow: 0 0 25px #06b6d4; transform: scale(1.05); }
+        .floating { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+    </style>
+</head>
+<body>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918037160119?text=Hello, I would like to book a diagnostic test." class="fixed bottom-8 right-8 z-50 bg-green-500 p-4 rounded-full shadow-2xl hover:scale-110 transition cursor-pointer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-8 h-8" alt="WhatsApp">
+    </a>
+
+    <!-- Header -->
+    <nav class="fixed w-full z-40 glass py-4 px-10 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter neon-text">DR. LAL <span class="text-cyan-400">PATHLABS</span></div>
+        <div class="space-x-8 hidden md:block opacity-70">
+            <a href="#services" class="hover:text-cyan-400 transition">Services</a>
+            <a href="#booking" class="hover:text-cyan-400 transition">Book Lab</a>
+            <a href="#reviews" class="hover:text-cyan-400 transition">Reviews</a>
+        </div>
+        <a href="#booking" class="glow-btn px-6 py-2 rounded-full font-bold text-sm">BOOK APPOINTMENT</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1579154273801-e91e3540d14d?auto=format&fit=crop&q=80&w=2070" class="hero-video" alt="Medical Tech">
+        <div data-aos="zoom-out" data-aos-duration="1500">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tight">Precision <br> <span class="text-cyan-400">Redefined.</span></h1>
+            <p class="max-w-xl mx-auto opacity-60 text-lg mb-8">Premium diagnostic services in Rani Bagh. Where advanced technology meets human care.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#booking" class="glow-btn px-10 py-4 rounded-xl font-bold">Start Booking</a>
+                <a href="tel:08037160119" class="glass px-10 py-4 rounded-xl font-bold border border-white/20">Call Clinic</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-10">
+        <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Elite Services</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass p-10 rounded-3xl floating hover:border-cyan-500/50 transition" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-cyan-400 text-4xl mb-6">🧬</div>
+                <h3 class="text-2xl font-bold mb-4">Genomic Testing</h3>
+                <p class="opacity-50">Advanced DNA sequencing and molecular diagnostics for preventive care.</p>
+            </div>
+            <div class="glass p-10 rounded-3xl hover:border-cyan-500/50 transition" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-cyan-400 text-4xl mb-6">🩸</div>
+                <h3 class="text-2xl font-bold mb-4">Blood Pathology</h3>
+                <p class="opacity-50">Accurate analysis with the fastest turnaround time in New Delhi.</p>
+            </div>
+            <div class="glass p-10 rounded-3xl floating hover:border-cyan-500/50 transition" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-cyan-400 text-4xl mb-6">🛡️</div>
+                <h3 class="text-2xl font-bold mb-4">Full Body Checkup</h3>
+                <p class="opacity-50">Comprehensive health screenings tailored to your lifestyle.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking System -->
+    <section id="booking" class="py-24 px-4 bg-gradient-to-b from-transparent to-cyan-900/10">
+        <div class="max-w-4xl mx-auto glass p-12 rounded-[40px]" data-aos="flip-left">
+            <h2 class="text-4xl font-bold mb-2">Secure Booking</h2>
+            <p class="opacity-50 mb-10">Your health data is encrypted and handled with care.</p>
+            <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="grid md:grid-cols-2 gap-6">
+                <input type="text" name="name" placeholder="Full Name" class="bg-white/5 border border-white/10 p-4 rounded-xl outline-none focus:border-cyan-500" required>
+                <input type="tel" name="phone" placeholder="Phone Number" class="bg-white/5 border border-white/10 p-4 rounded-xl outline-none focus:border-cyan-500" required>
+                <select name="test" class="bg-white/5 border border-white/10 p-4 rounded-xl outline-none focus:border-cyan-500 md:col-span-2 text-gray-400">
+                    <option>Select Test Category</option>
+                    <option>Full Body Checkup</option>
+                    <option>Covid-19 / Flu</option>
+                    <option>Diabetes Panel</option>
+                </select>
+                <button type="submit" class="glow-btn md:col-span-2 py-5 rounded-xl font-bold text-lg">CONFIRM APPOINTMENT</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-24 px-10 text-center">
+        <h2 class="text-4xl font-bold mb-16" data-aos="fade-up">Patient Stories</h2>
+        <div class="flex flex-wrap justify-center gap-6">
+            <div class="glass p-8 rounded-2xl max-w-sm text-left border-l-4 border-cyan-500" data-aos="fade-right">
+                <p class="italic mb-4 text-gray-300">"The staff at Rani Bagh center is incredibly polite and professional. Hygiene is 10/10."</p>
+                <div class="font-bold">⭐ 4.9/5 - Rahul S.</div>
+            </div>
+            <div class="glass p-8 rounded-2xl max-w-sm text-left border-l-4 border-cyan-500" data-aos="fade-left">
+                <p class="italic mb-4 text-gray-300">"Got my reports within 4 hours. The most tech-forward lab I've visited in Delhi."</p>
+                <div class="font-bold">⭐ 5.0/5 - Anjali M.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Map -->
+    <footer class="glass border-t border-white/10 pt-20 pb-10 px-10">
+        <div class="grid md:grid-cols-2 gap-12 mb-20">
+            <div>
+                <h3 class="text-3xl font-bold mb-6">Visit Our Center</h3>
+                <p class="opacity-60 mb-4">House No WZ3400, Mahindra Park, Rani Bagh, Shakurpur,<br>New Delhi, Delhi 110034</p>
+                <p class="text-cyan-400 font-bold text-xl">Call: 080 3716 0119</p>
+            </div>
+            <div class="rounded-3xl overflow-hidden h-64 grayscale contrast-125 border border-white/20">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.4633!2d77.1352!3d28.6853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQxJzA3LjEiTiA3N8KwMDgnMDYuNyJF!5e0!3m2!1sen!2sin!4v1625000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="text-center opacity-30 text-sm">
+            &copy; 2024 DR. LAL PATHLABS PATIENT SERVICE CENTRE. DESIGNED FOR THE FUTURE.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
